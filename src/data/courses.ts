@@ -22,6 +22,26 @@ export const courses: Course[] = [
             duration: '15:00'
           }
         ]
+      },
+      {
+        id: 's2',
+        title: 'Intermediate Concepts',
+        videos: [
+          {
+            id: 'v1',
+            title: 'Introduction to Modern Web Development',
+            thumbnail: 'https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?w=800&auto=format&fit=crop',
+            embedUrl: 'https://www.youtube.com/embed/w7ejDZ8SWv8',
+            duration: '15:00'
+          },
+          {
+            id: 'v2',
+            title: 'Sample video',
+            thumbnail: 'https://images.unsplash.com/photo-1593720219276-0b1eacd0aef4?w=800&auto=format&fit=crop',
+            embedUrl: 'https://xploitpedia.s3.us-east-1.amazonaws.com/videoplayback.mp4',
+            duration: '15:00'
+          }
+        ]
       }
     ]
   },
