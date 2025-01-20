@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-black text-white;
+  font-family: 'Inter', sans-serif;
+}
+
+.nav-link {
+  @apply text-gray-300 hover:text-purple-400 transition-colors relative;
+}
+
+.nav-link::after {
+  content: '';
+  @apply absolute left-0 right-0 -bottom-1 h-0.5 bg-gradient-to-r from-purple-500 to-pink-500 scale-x-0 transition-transform duration-300 origin-center;
+}
+
+.nav-link:hover::after {
+  @apply scale-x-100;
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+}
+
+/* Glow effects */
+.glow {
+  box-shadow: 0 0 20px theme('colors.purple.500');
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 30px theme('colors.purple.500');
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Scrollbar */
+.custom-scrollbar {
+  @apply overflow-x-auto;
+  scrollbar-width: thin;
+  scrollbar-color: theme('colors.purple.500') transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  @apply h-2 w-2;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-purple-500/50 rounded-full hover:bg-purple-500;
+}
+
+/* Button styles */
+.btn-neon {
+  @apply px-6 py-2 rounded-lg bg-gradient-to-r from-purple-500/20 to-pink-500/20 
+         border border-purple-500/30 hover:border-purple-500/60
+         text-white font-medium transition-all duration-300
+         hover:shadow-[0_0_20px_rgba(168,85,247,0.5)]
+         focus:shadow-[0_0_20px_rgba(168,85,247,0.5)]
+         active:scale-95;
+}
+
+.btn-primary {
+  @apply px-6 py-2 rounded-lg bg-gradient-to-r from-purple-500 to-pink-500 
+         text-white font-medium transition-all duration-300
+         hover:from-purple-600 hover:to-pink-600
+         hover:shadow-[0_0_30px_rgba(168,85,247,0.5)]
+         active:scale-95;
+}
+
+/* Card styles */
+.card-glass {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl
+         transition-all duration-300
+         hover:border-purple-500/30 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)];
+}
+
+/* Navigation buttons */
+.nav-button {
+  @apply flex items-center gap-2 px-4 py-2 rounded-lg
+         bg-gradient-to-r from-purple-500/20 to-pink-500/20
+         border border-purple-500/30 hover:border-purple-500/60
+         text-white font-medium transition-all duration-300
+         hover:shadow-[0_0_20px_rgba(168,85,247,0.5)]
+         disabled:opacity-50 disabled:cursor-not-allowed;
+}
