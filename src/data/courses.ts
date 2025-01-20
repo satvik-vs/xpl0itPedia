@@ -6,7 +6,7 @@ export const courses: Course[] = [
     title: 'Advanced Web Development',
     description: 'Master modern web development with React, TypeScript, and cutting-edge tools',
     thumbnail: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=800&auto=format&fit=crop',
-    instructor: 'Sarah Johnson',
+    instructor: 'Youtube',
     category: 'Web Development',
     duration: '40 hours',
     sections: [
